@@ -1,0 +1,23 @@
+<configs>
+	<append xpath="/recipes">
+		
+		<recipe name="HydroKit" count="1">
+			<ingredient name="resourceWood" count="1"/>
+		</recipe>
+		
+		<recipe name="Hydrofarm" count="1">
+			<ingredient name="HydroKit" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+			<ingredient name="bucketRiverWater" count="1"/>
+			<ingredient name="WeedPlantCutting" count="9"/>
+		</recipe>
+		
+		<recipe name="WeedFemalePlant" count="1">
+			<ingredient name="HydroKit" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+			<ingredient name="bucketRiverWater" count="1"/>
+			<ingredient name="FeminizedWeedSeeds" count="2"/>
+		</recipe>
+
+	</append>
+</configs>

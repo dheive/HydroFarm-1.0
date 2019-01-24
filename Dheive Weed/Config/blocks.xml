@@ -1,0 +1,265 @@
+<configs>
+	<append xpath="/blocks">	
+		<block name="WeedFemalePlant">
+			<property name="SortOrder2" value="0050"/> <!-- SortShape -->
+			<property name="Class" value="UpgradeRated" />
+			<property name="Material" value="Mcorn" />
+			<property name="Mesh" value="models"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/hydrofarm.unity3d?hydrofarm" />
+			<property name="Group" value="Science"/>
+			<property name="Mesh" value="cutoutmoveable"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="Weight" value="216" />
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket" />
+			<property name="UpgradeRated.ToBlock" value="plantedWeed2" />
+			<property name="UpgradeRated.Rate" value="3" />		<!-- 15 is max for the Rate -->
+			<!-- 1=slow, 1000=fast -->
+			<drop event="Destroy" count="0" />
+		</block>
+
+		<block name="plantedWeed2">
+			<property name="SortOrder2" value="0050"/> <!-- SortShape -->
+			<property name="Class" value="UpgradeRated" />
+			<property name="Material" value="Mcorn" />
+			<property name="Mesh" value="models"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/hydrofarm2.unity3d?hydrofarm2" />
+			<property name="Mesh" value="cutoutmoveable"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="Weight" value="216" />
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket" />
+			<property name="UpgradeRated.ToBlock" value="plantedWeed3" />
+			<property name="UpgradeRated.Rate" value="3" />		<!-- 15 is max for the Rate -->
+			<!-- 1=slow, 1000=fast -->
+			<drop event="Destroy" count="0" />
+		</block>
+		
+		<block name="plantedWeed3">
+			<property name="SortOrder2" value="0050"/> <!-- SortShape -->
+			<property name="Material" value="Mcorn" />
+			<property name="Mesh" value="models"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/hydrofarm3.unity3d?hydrofarm3" />
+			<property name="Mesh" value="cutoutmoveable"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="Weight" value="216" />
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket" />
+			<drop event="Destroy" name="WeedPlantCutting" count="9,18"/>
+			<property name="DowngradeBlock" value="WeedFemalePlant"/>
+		</block>
+		
+		<block name="Hydrofarm">
+			<property name="SortOrder2" value="0050"/> <!-- SortShape -->
+			<property name="Class" value="UpgradeRated" />
+			<property name="Material" value="Mcorn" />
+			<property name="Mesh" value="models"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/hydrofarm.unity3d?hydrofarm" />
+			<property name="Group" value="Science"/>
+			<property name="Mesh" value="cutoutmoveable"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="Weight" value="216" />
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket" />
+			<property name="UpgradeRated.ToBlock" value="Hydrofarm2" />
+			<property name="UpgradeRated.Rate" value="1" />
+			<drop event="Destroy" count="0" />
+		</block>
+		
+		<block name="Hydrofarm2">
+			<property name="SortOrder2" value="0050"/> <!-- SortShape -->
+			<property name="Class" value="UpgradeRated" />
+			<property name="Material" value="Mcorn" />
+			<property name="Mesh" value="models"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/hydrofarm2.unity3d?hydrofarm2" />
+			<property name="Mesh" value="cutoutmoveable"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="Weight" value="216" />
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket" />
+			<property name="UpgradeRated.ToBlock" value="Hydromauvebad" />
+			<property name="UpgradeRated.Rate" value="3" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="Hydromauvegood"/>
+				<property name="Item" value="meleeToolWeed"/>
+				<property name="ItemCount" value="0"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<drop event="Destroy" count="0" />
+		</block>
+		
+		<block name="Hydromauvegood">
+			<property name="SortOrder2" value="0050"/> <!-- SortShape -->
+			<property name="Class" value="UpgradeRated" />
+			<property name="Material" value="Mcorn" />
+			<property name="Mesh" value="models"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/hydrofarm.unity3d?hydrofarm" />
+			<property name="Mesh" value="cutoutmoveable"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="Weight" value="216" />
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket" />
+			<property name="UpgradeRated.ToBlock" value="Hydroblue" />
+			<property name="UpgradeRated.Rate" value="1" />
+			<drop event="Destroy" count="0" />
+		</block>
+		
+		<block name="Hydromauvebad">
+			<property name="SortOrder2" value="0050"/> <!-- SortShape -->
+			<property name="Class" value="UpgradeRated" />
+			<property name="Material" value="Mcorn" />
+			<property name="Mesh" value="models"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/hydrofarm.unity3d?hydrofarm" />
+			<property name="Mesh" value="cutoutmoveable"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="Weight" value="216" />
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket" />
+			<property name="UpgradeRated.ToBlock" value="Hydrobluebad" />
+			<property name="UpgradeRated.Rate" value="1" />
+			<drop event="Destroy" count="0" />
+		</block>
+		
+		<block name="Hydroblue">
+			<property name="SortOrder2" value="0050"/> <!-- SortShape -->
+			<property name="Class" value="UpgradeRated" />
+			<property name="Material" value="Mcorn" />
+			<property name="Mesh" value="models"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/hydroblue.unity3d?hydroblue" />
+			<property name="Mesh" value="cutoutmoveable"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="Weight" value="216" />
+			<property name="Path" value="solid"/>
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket" />
+			<property name="UpgradeRated.ToBlock" value="Hydromauvemiddle3" />
+			<property name="UpgradeRated.Rate" value="3" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="Hydromauvegood3"/>
+				<property name="Item" value="boostWeed"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<drop event="Destroy" count="0" />
+		</block>
+		
+		<block name="Hydrobluebad">
+			<property name="SortOrder2" value="0050"/> <!-- SortShape -->
+			<property name="Class" value="UpgradeRated" />
+			<property name="Material" value="Mcorn" />
+			<property name="Mesh" value="models"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/hydroblue.unity3d?hydroblue" />
+			<property name="Mesh" value="cutoutmoveable"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="Weight" value="216" />
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket" />
+			<property name="UpgradeRated.ToBlock" value="Hydromauvebad3" />
+			<property name="UpgradeRated.Rate" value="3" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="Hydromauvemiddle3"/>
+				<property name="Item" value="boostWeed"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<drop event="Destroy" count="0" />
+		</block>
+		
+		<block name="Hydromauvegood3">
+			<property name="SortOrder2" value="0050"/> <!-- SortShape -->
+			<property name="Class" value="UpgradeRated" />
+			<property name="Material" value="Mcorn" />
+			<property name="Mesh" value="models"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/hydrofarm.unity3d?hydrofarm" />
+			<property name="Mesh" value="cutoutmoveable"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="Weight" value="216" />
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket" />
+			<property name="UpgradeRated.ToBlock" value="Hydrofarm3" />
+			<property name="UpgradeRated.Rate" value="1" />
+			<drop event="Destroy" count="0" />
+		</block>
+		
+		<block name="Hydromauvemiddle3">
+			<property name="SortOrder2" value="0050"/> <!-- SortShape -->
+			<property name="Class" value="UpgradeRated" />
+			<property name="Material" value="Mcorn" />
+			<property name="Mesh" value="models"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/hydrofarm.unity3d?hydrofarm" />
+			<property name="Mesh" value="cutoutmoveable"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="Weight" value="216" />
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket" />
+			<property name="UpgradeRated.ToBlock" value="Hydromiddle" />
+			<property name="UpgradeRated.Rate" value="1" />
+			<drop event="Destroy" count="0" />
+		</block>
+		
+		<block name="Hydromauvebad3">
+			<property name="SortOrder2" value="0050"/> <!-- SortShape -->
+			<property name="Class" value="UpgradeRated" />
+			<property name="Material" value="Mcorn" />
+			<property name="Mesh" value="models"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/hydrofarm.unity3d?hydrofarm" />
+			<property name="Mesh" value="cutoutmoveable"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="Weight" value="216" />
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket" />
+			<property name="UpgradeRated.ToBlock" value="Hydrobad" />
+			<property name="UpgradeRated.Rate" value="1" />
+			<drop event="Destroy" count="0" />
+		</block>
+		
+		<block name="Hydrofarm3">
+			<property name="SortOrder2" value="0050"/> <!-- SortShape -->
+			<property name="Material" value="Mcorn" />
+			<property name="Mesh" value="models"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/hydrofarm3.unity3d?hydrofarm3" />
+			<property name="Mesh" value="cutoutmoveable"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="Weight" value="216" />
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket" />
+			<property name="UpgradeRated.Rate" value="1" />
+			<drop event="Destroy" name="carBattery" count="1"/>
+			<drop event="Destroy" name="bucketEmpty" count="1"/>
+			<drop event="Destroy" name="Weed" count="300,450"/>
+		</block>
+		
+		<block name="Hydromiddle">
+			<property name="SortOrder2" value="0050"/> <!-- SortShape -->
+			<property name="Material" value="Mcorn" />
+			<property name="Mesh" value="models"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/hydrofarm3.unity3d?hydrofarm3" />
+			<property name="Mesh" value="cutoutmoveable"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="Weight" value="216" />
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket" />
+			<property name="UpgradeRated.Rate" value="1" />
+			<drop event="Destroy" name="carBattery" count="1"/>
+			<drop event="Destroy" name="bucketEmpty" count="1"/>
+			<drop event="Destroy" name="Weed" count="200,300"/>
+		</block>
+
+		<block name="Hydrobad">
+			<property name="SortOrder2" value="0050"/> <!-- SortShape -->
+			<property name="Material" value="Mcorn" />
+			<property name="Mesh" value="models"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/hydrofarm3.unity3d?hydrofarm3" />
+			<property name="Mesh" value="cutoutmoveable"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="Weight" value="216" />
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket" />
+			<property name="UpgradeRated.Rate" value="1" />
+			<drop event="Destroy" name="carBattery" count="1"/>
+			<drop event="Destroy" name="bucketEmpty" count="1"/>
+			<drop event="Destroy" name="Weed" count="50,150"/>
+		</block>
+	</append>
+
+</configs>
